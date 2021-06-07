@@ -1,6 +1,7 @@
 import time
 import sys
-sys.path.append(".")
+import os
+sys.path.append(os.path.abspath("/home/rod/Desktop/sumo-modular-framework"))
 
 from environment.core.BaseEnv import SumoBaseEnvironment
 from environment.modules.CellsModule import CellsModule
@@ -37,5 +38,5 @@ class CustomExperiment(SumoBaseEnvironment):
 				self.step()
 
 if __name__ == "__main__":
-	env = CustomExperiment(env_dir="examples/normal_simulation/simulation_env/",out_dir="examples/normal_simulation/outputs/",use_gui=False,num_seconds=86400)
+	env = CustomExperiment(env_dir="/home/rod/Desktop/sumo-modular-framework/examples/normal_simulation/simulation_env/",out_dir="/home/rod/Desktop/sumo-modular-framework/examples/normal_simulation/outputs",use_gui=False,num_seconds=86400)
 	env.run()
