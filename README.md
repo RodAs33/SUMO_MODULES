@@ -1,2 +1,2 @@
 # SUMO Modular Framework
-Because
+Because it's the way it is
