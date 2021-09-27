@@ -123,8 +123,11 @@ class EmissionsModule(BaseModule):
         return emission_ids[emission_type]
 
     def updateEmissions(self, currentTimestep):
-        # if currentTimestep % self.update_every != 0:
-        # 	return
+        #print(self.update_every)
+        #print(self.save_every)
+
+        if currentTimestep % self.update_every != 0:
+         	return
         for edge in self._cells.edge_to_cells.keys():
             edge_emissions = self._traci.edge.getSubscriptionResults(edge)
             for polyId in self._cells.edge_to_cells[edge]:
